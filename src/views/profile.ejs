@@ -16,15 +16,9 @@
 </head>
 
 <body>
-    <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+    <header class="navbar navbar-bright" role="banner">
         <div class="container">
             <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a href="/" class="navbar-brand">Home</a>
             </div>
             <nav class="collapse navbar-collapse" role="navigation">
@@ -54,96 +48,37 @@
             </nav>
         </div>
     </header>
-
-    <div id="masthead">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <h1>Book Library
-                        <p class="lead"></p>
-                    </h1>
+    <main>
+        <section class="profile-section">
+            <div class="container">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-12  text-left">
+                            <h1>User Details are below</h1>
+                            <p>User Name:<%=user.username%></p>
+                            <p></p>User Password:<%=user.password%></p>
+                        </div>
+                    </div>
+                    <!--/col-12-->
                 </div>
-                <div class="col-md-5">
-                    <div class="well well-lg">
-                        <div class="row">
-                            <div class="col-sm-12">
-
-
-                            </div>
+            </div>
+        </section>
+        <section class="footer-section">
+            <div class="container" id="footer">
+                <div class="row">
+                    <div class="col col-sm-12">
+                        <h1>Follow Me</h1>
+                        <div class="btn-group">
+                            <a href="#"><i class="icon-twitter icon-large"></i></a>
+                            <a href="#"><i class="icon-facebook icon-large"></i></a>
+                            <a href="#"><i class="icon-google-plus icon-large"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><!-- /cont -->
+        </section>
+    </main>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="top-spacer"> </div>
-                </div>
-            </div>
-        </div><!-- /cont -->
-
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel">
-                    <div class="panel-body">
-                        <!--/stories-->
-                        <div class="row">
-                            <br>
-                            <div class="col-md-2 col-sm-3 text-center">
-                                Profile Details!
-                                <li>User Name:<%=user.username%></li>
-                                <li>User Password:<%=user.password%></li>
-                                <li>Id:<%=user._id%></li>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-            <!--/col-12-->
-        </div>
-    </div>
-    <hr>
-    <div class="container" id="footer">
-        <div class="row">
-            <div class="col col-sm-12">
-
-                <h1>Follow Us</h1>
-                <div class="btn-group">
-                    <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
-                    <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
-                    <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i>
-                        Google+</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <hr>
-    <hr>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <ul class="list-inline">
-                        <li><i class="icon-facebook icon-2x"></i></li>
-                        <li><i class="icon-twitter icon-2x"></i></li>
-                        <li><i class="icon-google-plus icon-2x"></i></li>
-                        <li><i class="icon-pinterest icon-2x"></i></li>
-                    </ul>
-
-                </div>
-                <div class="col-sm-6">
-                    <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a
-                            href="http://www.bootply.com">Bootply</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
     <!-- script references -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>

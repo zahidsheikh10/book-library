@@ -2,130 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title><%=title%></title>
-    <meta name="generator" content="Bootply" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title><%=title%></title>
+	<meta name="generator" content="Bootply" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-    <link href="/css/styles.css" rel="stylesheet">
+	<link href="/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="navbar navbar-bright navbar-fixed-top" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="/" class="navbar-brand">Home</a>
-            </div>
-            <nav class="collapse navbar-collapse" role="navigation">
-                <ul class="nav navbar-nav">
-                    <% for(let i= 0; i< nav.length; i++){%>
-                    <li>
-                        <a href=<%=nav[i].link%>><%=nav[i].title%></a>
-                    </li>
-                    <%}%>
-                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div id="masthead">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <h1>Book Library</h1>
-                </div>
-            </div>
-        </div><!-- /cont -->
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel">
-                    <div class="panel-body">
-                        <!--/stories-->
-                        <div class="row">
-                            <br>
-                            <div class="col-md-12">
-                                <form name="signUpForm" action="/auth/signin" method="post" class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="username">Username:</label>
-                                        <div class="col-sm-10">
-                                            <input type="username" class="form-control" id="username" placeholder="Enter username" name="username">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="pwd">Password:</label>
-                                        <div class="col-sm-10">
-                                            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-offset-2 col-sm-10">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" name="remember"> Remember me</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-offset-2 col-sm-10">
-                                            <button type="submit" class="btn btn-primary">Sign In</button>
-                                            <a href="/auth/signUp" class="btn btn-primary" role="button">Sign up</a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-            <!--/col-12-->
-        </div>
-    </div>
-    <hr>
-    <div class="container" id="footer">
-        <div class="row">
-            <div class="col col-sm-12">
-
-                <h1>Follow Us</h1>
-                <div class="btn-group">
-                    <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
-                    <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
-                    <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i>
-                        Google+</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <hr>
-    <hr>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <ul class="list-inline">
-                        <li><i class="icon-facebook icon-2x"></i></li>
-                        <li><i class="icon-twitter icon-2x"></i></li>
-                        <li><i class="icon-google-plus icon-2x"></i></li>
-                        <li><i class="icon-pinterest icon-2x"></i></li>
-                    </ul>
-
-                </div>
-                <div class="col-sm-6">
-                    <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a
-                            href="http://www.bootply.com">Bootply</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- script references -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-</body>
+	<header class="navbar navbar-bright" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="/" class="navbar-brand">Home</a>
+			</div>
+			<nav class="collapse navbar-collapse" role="navigation">
+				<ul class="nav navbar-nav">
+					<% for(let i= 0; i< nav.length; i++){%>
+					<li>
+						<a href=<%=nav[i].link%>><%=nav[i].title%></a>
+					</li>
+					<%}%>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section class="introduction form-signUp">
+				<div class="container">
+					<div class="col-md-12">
+						<h1 class="text-center text-capitalize">fill all the below details to create a free account</h1>
+						<form name="signUpForm" action="/auth/signup" method="post" class="form-horizontal">
+								<!-- <div class="form-group">
+									<label class="control-label col-sm-2" for="name">Name:</label>
+									<div class="col-sm-10">
+										<input  class="form-control" id="name" placeholder="Enter name" name="username">
+									</div>
+								</div> -->
+								<div class="form-group">
+										<label class="control-label col-sm-2" for="username">Username:</label>
+										<div class="col-sm-10">
+											<input class="form-control" id="username" placeholder="Enter username" name="username">
+										</div>
+								</div>
+								<div class="form-group">
+										<label class="control-label col-sm-2" for="pwd">Password:</label>
+										<div class="col-sm-10">
+											<input  class="form-control" id="password" placeholder="Enter password" name="password">
+										</div>
+								</div>
+								<!-- <div class="form-group">
+									<label class="control-label col-sm-2" for="pwd">Email</label>
+									<div class="col-sm-10">
+										<input  class="form-control" id="email" placeholder="Enter email" name="password">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-2" for="pwd">Phone:</label>
+									<div class="col-sm-10">
+										<input  class="form-control" id="phone" placeholder="Enter phone" name="password">
+									</div>
+								</div> -->
+								<div class="form-group">
+										<div class="col-sm-offset-2 col-sm-10">
+												<button type="submit" class="btn btn-primary">Sign up</button>
+										</div>
+								</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="footer-section">
+				<div class="container" id="footer">
+					<div class="row">
+						<div class="col col-sm-12">
+								<h1>Follow Me</h1>
+								<div class="btn-group">
+										<a href="#"><i class="icon-twitter icon-large"></i></a>
+										<a href="#"><i class="icon-facebook icon-large"></i></a>
+										<a href="#"><i class="icon-google-plus icon-large"></i></a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+			<!-- script references -->
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+			<script src="/js/bootstrap.min.js"></script>
+	</body>
 </html>

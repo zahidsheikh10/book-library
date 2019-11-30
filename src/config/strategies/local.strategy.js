@@ -7,11 +7,12 @@ module.exports = function localStrategy() {
     passport.use(new Strategy((
         {
             usernameField: 'username',
-            passwordField: 'password'
+            passwordField: 'password',
+            
         },(username,password,done) => {
             User.findOne({ username })
                 .then(user => {
-                    if(user.password === password){
+                    if( user!=null && user.password === password){
                         done(null,user)
                     }
                     else{

@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 let User = require('../../models/users');
 
 function router(nav) {
-    authRouter.route('/signUp')
+    authRouter.route('/signup')
     .get((req, res) => {
         res.render('signUp', {
             nav,
@@ -14,20 +14,18 @@ function router(nav) {
         })
     })
     .post((req,res) => {
-       const {name,username,password,email,phone} = req.body;
+       console.log(req.body); 
+       const {username,password} = req.body;
         User.findOne({ username})
             .then(user => {
-                if (user!= null && user.username === username) {
+                if (user != null && user.username === username) {
                     return res
                         .status(400)
-                        .json({ usererror: "user with this username  already registered in our system" });
+                        .json({ usererror: "user with this username and email already registered in our system" });
                 } else {
                     const newUser = new User({
-                        name: name,
                         username:username,
-                        password:password,
-                        email:email,
-                        phone:phone,
+                        password:password
                     });
                     newUser
                         .save()
